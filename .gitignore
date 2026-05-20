@@ -1,0 +1,91 @@
+# Tüze CRM — Git Ignore
+# ====================================================================
+
+# Hassas / kullanıcıya özel
+.env
+.env.local
+.env.*.local
+
+# Yüklenen dosyalar (volume)
+uploads/
+backend/uploads/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+venv/
+.venv/
+env/
+
+# Frontend
+node_modules/
+dist/
+build/
+.vite/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+publish-*.log
+compose-up.log
+
+# Geçici / debug
+check_*.py
+trace_*.py
+trigger_*.py
+debug_*.py
+nul
+
+# Test
+coverage/
+.coverage
+
+# Backup
+*.bak
+*.backup
+*.sql
+
+# Docker
+docker-compose.override.local.yml
+
+# Dev runtime data
+postgres_data/
+redis_data/
+
+# ====================================================================
+# KAYNAK KODU — PUBLIC REPO'YA EKLENMEZ
+# Source code yalnızca yerel geliştirme makinesinde tutulur, GitHub'a
+# yalnızca installer + dokümantasyon push'lanır.
+# Leading slash = sadece repo ROOT'undaki klasörü kapsa (install/ içindeki
+# aynı isimli dosyaları yutmasın)
+# ====================================================================
+/backend/
+/frontend/
+/report/
+/nginx/
+/docker-compose.yml
+/docker-compose.override.yml
+
+# Geliştirme test dosyaları
+/test_*.py
+*.test.py
+
+# Yardımcı yerel script'ler (local path'ler içerir)
+/tuze-crm-basla.bat
+/ip-yenile.bat
+/guncelle-ip.ps1
+/.env.example
